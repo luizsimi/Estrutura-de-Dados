@@ -1,0 +1,28 @@
+int main() {
+
+  Produto *produtos = new Produto[10];
+
+  for (int i = 0; i < 10; i++) {
+    cout << "Produto " << i + 1 << ":" << endl;
+    cout << "Nome: ";
+    getline(cin, produtos[i].nome);
+    cout << "Preço: ";
+    cin >> produtos[i].preco;
+    cout << "Quantidade em Estoque: ";
+    cin >> produtos[i].quantidadeEstoque;
+    cin.ignore(); // Ignora o \n da entrada
+  }
+
+  cout << "\nProdutos armazenados:\n";
+  for (int i = 0; i < 10; i++) {
+    cout << "Produto " << i + 1 << ":" << endl;
+    cout << "Nome: " << produtos[i].nome << endl;
+    cout << "Preço: R$ " << produtos[i].preco << endl;
+    cout << "Quantidade em Estoque: " << produtos[i].quantidadeEstoque << endl;
+    cout << endl;
+  }
+
+  delete[] produtos;
+
+  return 0;
+}

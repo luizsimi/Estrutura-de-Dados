@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+struct Estudante {
+  string nomeCompleto;
+  int idade;
+  float mediaFinal;
+};
+
+int main() {
+  
+  Estudante aluno;
+
+    cout << "Digite o nome completo do estudante: ";
+  getline(cin, aluno.nomeCompleto);
+
+  cout << "Digite a idade do estudante: ";
+  cin >> aluno.idade;
+
+  cout << "Digite a média final do estudante: ";
+  cin >> aluno.mediaFinal;
+
+  
+  cout << "\nInformações do estudante:\n";
+  cout << "Nome completo: " << aluno.nomeCompleto << endl;
+  cout << "Idade: " << aluno.idade << " anos" << endl;
+  cout << "Média final: " << aluno.mediaFinal << endl;
+
+  return 0;
+}
